@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1017149298565",
+    "project_id": "kingdom-care-admin-7b40f",
+    "storage_bucket": "kingdom-care-admin-7b40f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1017149298565:android:2bc12d32e6c28ce0fd16ec",
+        "android_client_info": {
+          "package_name": "com.example.kingdum_care"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1017149298565-jtav4ao2soo3iop3kkkr3utjf8gcdfn0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChjirwrsvK0lOAxeyA1-WQkmOsqWp3Wcs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1017149298565-jtav4ao2soo3iop3kkkr3utjf8gcdfn0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
