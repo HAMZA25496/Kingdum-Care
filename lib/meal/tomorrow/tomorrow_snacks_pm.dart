@@ -68,13 +68,15 @@ class _TomorrowSnacksPMState extends State<TomorrowSnacksPM> {
                               const EdgeInsets
                                   .only(
                                   top:
-                                  10.0),
+                                  7.0),
                               child: Column(
                                 crossAxisAlignment:
                                 CrossAxisAlignment
                                     .start,
                                 children: [
-                                Text( DateFormat('MMM-dd-yyyy').format( widget.snacksPM[index].date!),),
+                                Text( DateFormat('MMM-dd-yyyy').format( widget.snacksPM[index].date!),  style: TextStyle(
+                                    fontSize:
+                                    10),),
 
                                 Text(
                                     widget.snacksPM[

@@ -67,7 +67,7 @@ class _TomorrowSnacksAmState extends State<TomorrowSnacksAm> {
                               const EdgeInsets
                                   .only(
                                   top:
-                                  10.0),
+                                  7.0),
                               child: Column(
                                 crossAxisAlignment:
                                 CrossAxisAlignment

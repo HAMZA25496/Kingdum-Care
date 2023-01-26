@@ -58,7 +58,7 @@ class _AttendenceHomeState extends State<AttendenceHome> {
             height: 38,
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 40.0),
+            padding: const EdgeInsets.symmetric(horizontal: 30.0),
             child: InkWell(
               onTap: () {
                 Navigator.push(
@@ -66,39 +66,39 @@ class _AttendenceHomeState extends State<AttendenceHome> {
                     MaterialPageRoute(
                         builder: (context) => const AttendenceDashboard()));
               },
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                child: Container(
-                  width: double.infinity,
-                  height: 76,
-                  decoration: BoxDecoration(
-                      color: const Color(0xFF0EAAF4),
-                      borderRadius: BorderRadius.circular(10.0)),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
+              child: Container(
+                width: double.infinity,
+                height: 76,
+                decoration: BoxDecoration(
+                    color: const Color(0xFF0EAAF4),
+                    borderRadius: BorderRadius.circular(10.0)),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 8.0),
+                      child: Container(
                         width: 37,
                         height: 37,
                         decoration: const BoxDecoration(
                             image: DecorationImage(
                                 image: AssetImage("images/report1.png"))),
                       ),
-                      const SizedBox(
-                        width: 11,
+                    ),
+                    const SizedBox(
+                      width: 11,
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.only(right: 5.0,),
+                      child: Text(
+                        "ATTENDENCE REPORTS",
+                        style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
                       ),
-                      const Padding(
-                        padding: EdgeInsets.only(right: 8.0),
-                        child: Text(
-                          "ATTENDENCE REPORTS",
-                          style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white),
-                        ),
-                      )
-                    ],
-                  ),
+                    )
+                  ],
                 ),
               ),
             ),

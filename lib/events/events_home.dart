@@ -81,7 +81,8 @@ class _EventsHomeState extends State<EventsHome> {
                     : SizedBox(
                         height: size.height,
                         child: ListView.separated(
-                          shrinkWrap: true,
+                            shrinkWrap: true,
+                            physics: ClampingScrollPhysics(),
                             itemBuilder: (context, index) {
                               return Padding(
                                 padding:  const EdgeInsets.symmetric(horizontal: 20),
