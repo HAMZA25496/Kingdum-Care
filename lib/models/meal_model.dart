@@ -26,7 +26,7 @@ class MealModel {
     mealType: json["mealType"],
 
   );
-  Map<String, dynamic> tojson() {
+  Map<String, dynamic> toJson() {
     return {
       "title": title,
       "date": date,

@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:kingdum_care/class/add_class.dart';
+import 'package:kingdum_care/class/all_classes.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import '../models/class_model.dart';
 import '../models/teacher_model.dart';
@@ -233,7 +233,7 @@ class _SelectClassState extends State<SelectClass> {
                           return DropdownMenuItem(
                             value: teacherValue.indexOf(teachers),
                             child: Text(
-                                "${teachers.firstName} ${teachers.lastName}"),
+                                "${teachers.firstName}${teachers.lastName}"),
                           );
                         }).toList(),
                         // After selecting the desired option,it will

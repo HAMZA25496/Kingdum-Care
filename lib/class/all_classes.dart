@@ -186,9 +186,11 @@ class _AddClassState extends State<AddClass> {
                                                           .delete();
                                                       classValue.remove(
                                                           classValue[index]);
+
                                                       Navigator.pop(context);
                                                     });
                                                   },
+
                                                   child: Text("Delete")),
                                             ),
                                           ];

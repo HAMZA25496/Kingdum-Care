@@ -1,7 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:kingdum_care/meal/meal_container.dart';
-import 'package:kingdum_care/meal/tomorrow/tomorrow_snacks_am.dart';
 import 'package:kingdum_care/meal/tomorrow/tomorrow_meal_home.dart';
 import 'package:kingdum_care/meal/weekly/weekly_meal.dart';
 import 'package:kingdum_care/models/meal_model.dart';
@@ -13,6 +11,8 @@ enum Meal {
 }
 
 class MealTabbar extends StatefulWidget {
+  const MealTabbar({super.key});
+
   @override
   State<MealTabbar> createState() => _MealTabbarState();
 }
@@ -31,7 +31,7 @@ class _MealTabbarState extends State<MealTabbar> {
   Future<void> mealDataFromFirebase() async {
     mealData = await FirebaseFirestore.instance.collection("MealDetails").get();
 
-    if (mealData!.docs.length > 0) {
+    if (mealData!.docs.isNotEmpty) {
       mealValue = [];
 
       Future.forEach(mealData!.docs, (element) {
@@ -43,7 +43,7 @@ class _MealTabbarState extends State<MealTabbar> {
       setState(() {});
     }
 
-    if (mealData!.docs.length > 0) {
+    if (mealData!.docs.isNotEmpty) {
       await Future.forEach(mealData!.docs, (element) {
         if (element["mealType"] == "Snacks AM") {
           snackAM.add(MealModel.fromJson(element));
@@ -95,7 +95,7 @@ class _MealTabbarState extends State<MealTabbar> {
                     child: Container(
                       height: 40,
                       decoration: BoxDecoration(
-                        color: Color(0xFFF3F3F3),
+                        color: const Color(0xFFF3F3F3),
 
                         borderRadius: BorderRadius.circular(10),
                         // border: Border.all(color: Color.fromRGBO(27, 189, 198, 1))
@@ -105,9 +105,9 @@ class _MealTabbarState extends State<MealTabbar> {
                         indicator: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             color: Colors.white),
-                        labelColor: Color(0xFF00B925),
-                        unselectedLabelColor: Color(0xFF00B925),
-                        tabs: [
+                        labelColor: const Color(0xFF00B925),
+                        unselectedLabelColor: const Color(0xFF00B925),
+                        tabs: const [
                           Tab(
                             text: 'Tomorrow',
                           ),
@@ -119,13 +119,13 @@ class _MealTabbarState extends State<MealTabbar> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 SizedBox(
                   height: size.height,
                   width: size.width,
-                  child: TabBarView(children: [
+                  child: const TabBarView(children: [
                     TomorrowMeal(),
                     WeeklyMeal(),
                     // Padding(
@@ -257,7 +257,8 @@ class _MealTabbarState extends State<MealTabbar> {
                     //     ),
                     //   ],
                     // ),
-                  ]),
+                  ]
+                  ),
                 ),
               ],
             ),

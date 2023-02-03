@@ -5,7 +5,7 @@ import 'package:kingdum_care/dashboard_card.dart';
 import 'package:kingdum_care/events/events_home.dart';
 import 'package:kingdum_care/meal/meal_home.dart';
 import 'package:kingdum_care/teachers/teacher_screen.dart';
-import 'class/add_class.dart';
+import 'class/all_classes.dart';
 
 class Dashboard extends StatefulWidget {
    const Dashboard({Key? key}) : super(key: key);
@@ -195,7 +195,7 @@ class _DashboardState extends State<Dashboard> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const MealsHome()));
+                                builder: (context) =>  MealsHome()));
                       },
                       child: SizedBox(
                           height: 102,

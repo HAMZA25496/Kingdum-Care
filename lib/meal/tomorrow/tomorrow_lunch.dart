@@ -14,7 +14,7 @@ class TomorrowLunch extends StatefulWidget {
 class _TomorrowLunchState extends State<TomorrowLunch> {
   @override
   Widget build(BuildContext context) {
-    print("tomorrow Lunch Calles");
+    print("tomorrow Lunch Calls");
     Size size = MediaQuery.of(context).size;
     return Padding(
         padding: const EdgeInsets.symmetric(
@@ -76,7 +76,9 @@ class _TomorrowLunchState extends State<TomorrowLunch> {
                                 CrossAxisAlignment
                                     .start,
                                 children: [
-                                  Text( DateFormat('MMM-dd-yyyy').format( widget.lunch[index].date!), style: TextStyle(
+                                  Text( DateFormat('MMM-dd-yyyy').
+                                  format( widget.lunch[index].date!),
+                                    style: TextStyle(
                                       fontSize:
                                       10.0),),
                                   Text(

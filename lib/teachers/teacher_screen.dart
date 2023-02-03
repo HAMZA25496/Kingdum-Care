@@ -129,8 +129,6 @@ class _TeachersScreenState extends State<TeachersScreen> {
                                         teacherValue[index]
                                             .profilePic
                                             .toString(),
-                                        width: 40,
-                                        height: 40,
                                         fit: BoxFit.cover,
                                       ),
                                     ),
